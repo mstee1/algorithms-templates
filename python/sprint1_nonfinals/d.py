@@ -1,8 +1,10 @@
 from typing import List
 
 def get_weather_randomness(temperatures: List[int]) -> int:
-    # Здесь реализация вашего решения
-    pass
+    temperatures=[min(temperatures)-1]+temperatures+[min(temperatures)-1]
+    w_ch=(len([n for n in range(1,len(temperatures)) 
+        if temperatures[n-1]<temperatures[n] >temperatures[n+1]]))
+    return w_ch
 
 def read_input() -> List[int]:
     n = int(input())
