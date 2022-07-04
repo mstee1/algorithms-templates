@@ -1,20 +1,24 @@
-from typing import List, Tuple, Optional
+from typing import List, Tuple
 
-def two_sum(arr: List[int], target_sum: int) -> Optional[Tuple[int, int]]:
-    # Здесь реализация вашего решения
-    pass
+def moving_average(arr: List[int], window_size: int) -> List[float]:
+    count = 0
+    while True:
+        for i in range(0, len(arr)):
+            for j in range(i+1, len(arr)):
+                if arr[i] + arr[j] == window_size:
+                    print(arr[i], arr[j])
+                    count += 1
+                    return False
+        if count == 0:
+            print(bug)
+            return False
 
 def read_input() -> Tuple[List[int], int]:
     n = int(input())
     arr = list(map(int, input().strip().split()))
-    target_sum = int(input())
-    return arr, target_sum
+    window_size = int(input())
+    return arr, window_size
 
-def print_result(result: Optional[Tuple[int, int]]) -> None:
-    if result is None:
-        print(None)
-    else:
-        print(" ".join(map(str, result)))
-
-arr, target_sum = read_input()
-print_result(two_sum(arr, target_sum))
+bug = 'None'
+arr, window_size = read_input()
+moving_average(arr, window_size)

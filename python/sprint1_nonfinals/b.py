@@ -1,6 +1,11 @@
 def check_parity(a: int, b: int, c: int) -> bool:
-    # Здесь реализация вашего решения
-    pass
+    result = False
+    if a % 2 == 0 and b % 2 == 0 and c % 2 == 0:
+        result = True
+        return result
+    elif a % 2 != 0 and b % 2 != 0 and c % 2 != 0:
+        result = True
+        return result
 
 def print_result(result: bool) -> None:
     if result:
