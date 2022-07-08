@@ -1,9 +1,6 @@
 def to_binary(number: int) -> str:
-    num_binary = ''
-    while number > 0:
-        num_binary = str(number % 2) + num_binary
-        number = number // 2
-    return num_binary
+    # Здесь реализация вашего решения
+    pass
 
 def read_input() -> int:
     return int(input().strip())
